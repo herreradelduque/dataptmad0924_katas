@@ -41,6 +41,10 @@ Finally open a Pull Request:
 your branch -> main
 ```
 
+```
+kata example [victor galan]
+```
+
 The instructional team will review your branch and will merge the winner one.
 
 **To work on the subsequent assignments**, create a new branch for every new assignment.
