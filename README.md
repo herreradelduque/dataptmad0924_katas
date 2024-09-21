@@ -10,6 +10,9 @@
 1. Before starting a new assignment: 
 
 ````
+git status
+``````
+````
 git pull origin main
 ``````
 
