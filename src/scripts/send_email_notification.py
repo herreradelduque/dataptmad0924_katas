@@ -9,9 +9,9 @@ from src.scripts.general.email_map import *
 # Replace this with your own logic, possibly pulling from a database or predefined mapping
 def get_student_email_from_username(username):
     # Example hardcoded mapping (you should replace this with your actual mapping)
-    # student_email_map = {
-    #     "herreradelduque": "herreradelduque0@gmail.com"
-    # }
+    student_email_map = {
+        "herreradelduque": "herreradelduque0@gmail.com"
+    }
     
     return student_email_map.get(username)
 
