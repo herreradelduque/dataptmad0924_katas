@@ -3,7 +3,6 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.mime.application import MIMEApplication
-from src.scripts.general.email_map import *
 
 # Function to retrieve student's email based on their GitHub username
 # Replace this with your own logic, possibly pulling from a database or predefined mapping
