@@ -21,10 +21,9 @@ jobs:
       run: ls -R
 
     - name: Send notification to student
-      working-directory: ./scripts
       run: |
         pip install requests
-        python send_notification.py  # No need to specify the full path
+        python scripts/send_email_notification.py  # Correcting the script name
       env:
         STUDENT_USERNAME: ${{ github.event.pull_request.user.login }}
         PR_LINK: ${{ github.event.pull_request.html_url }}
