@@ -32,4 +32,4 @@ def send_email(to_email, pr_link):
 if __name__ == "__main__":
     student_email = os.getenv('STUDENT_EMAIL')  # Correo del estudiante desde GitHub Secrets
     pr_link = os.getenv('PR_LINK')  # Enlace a la PR desde el entorno del flujo de trabajo
-    send_e
+    send_email(student_email, pr_link)
