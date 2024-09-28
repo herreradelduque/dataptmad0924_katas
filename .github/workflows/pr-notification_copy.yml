@@ -7,7 +7,7 @@ on:
 jobs:
   notify:
     runs-on: ubuntu-latest
-
+    
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
@@ -17,17 +17,13 @@ jobs:
       with:
         python-version: '3.x'
 
-    - name: List files for debugging
-      run: ls -R
-
     - name: Send notification to student
       run: |
         pip install requests
         python scripts/send_email_notification2.py
-      env:
-        STUDENT_USERNAME: ${{ github.event.pull_request.user.login }}
-        PR_LINK: ${{ github.event.pull_request.html_url }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        LESSONS_URL: "https://platforma-de-lessons.com/upload"
-        EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
-        EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+    
+        STUDENT_EMAIL: ${{ github.event.pull_request.user.email }}  # Correo del autor de la PR
+        PR_LINK: ${{ github.event.pull_request.html_url }}  # Enlace a la PR
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Secreto de autenticación
+        EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}  # Correo electrónico del remitente
+        EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}  # Contraseña de aplicación
