@@ -20,7 +20,7 @@ jobs:
     - name: List files for debugging
       run: ls -R  # This will help confirm the structure
     
-      - name: Print Working Directory
+    - name: Print Working Directory
       run: pwd # This will help confirm the structure
 
     - name: Send notification to student
