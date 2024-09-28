@@ -24,11 +24,11 @@ jobs:
       run: |
         pip install requests
         python scripts/send_notification.py
-      working-directory: ./  # Ensure we're in the root of the repo
+      working-directory: ./scripts  # Change the working directory to the scripts folder
       env:
-        STUDENT_USERNAME: ${{ github.event.pull_request.user.login }}  # GitHub username of the PR author
-        PR_LINK: ${{ github.event.pull_request.html_url }}  # Link to the PR
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub secret for authentication
-        LESSONS_URL: "https://platforma-de-lessons.com/upload"  # URL for uploading PR link
-        EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}  # Email for sending notifications
-        EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}  # Email password for SMTP
+        STUDENT_USERNAME: ${{ github.event.pull_request.user.login }}
+        PR_LINK: ${{ github.event.pull_request.html_url }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        LESSONS_URL: "https://platforma-de-lessons.com/upload"
+        EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
+        EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
