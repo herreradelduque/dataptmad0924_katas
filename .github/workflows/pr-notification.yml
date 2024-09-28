@@ -19,12 +19,15 @@ jobs:
 
     - name: List files for debugging
       run: ls -R  # This will help confirm the structure
+    
+      - name: Print Working Directory
+      run: pwd # This will help confirm the structure
 
     - name: Send notification to student
       run: |
         pip install requests
         python scripts/send_notification.py
-      working-directory: ./scripts  # Change the working directory to the scripts folder
+      working-directory: ./  # Change the working directory to the scripts folder
       env:
         STUDENT_USERNAME: ${{ github.event.pull_request.user.login }}
         PR_LINK: ${{ github.event.pull_request.html_url }}
