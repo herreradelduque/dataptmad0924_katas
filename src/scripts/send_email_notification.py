@@ -1,17 +1,18 @@
 import os
 import smtplib
+import json
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from email.mime.application import MIMEApplication
 
 # Function to retrieve student's email based on their GitHub username
-# Replace this with your own logic, possibly pulling from a database or predefined mapping
 def get_student_email_from_username(username):
-    # Example hardcoded mapping (you should replace this with your actual mapping)
-    student_email_map = {
-        "herreradelduque": "herreradelduque0@gmail.com"
-    }
+    # Load the student email map from an environment variable
+    student_email_map_json = os.getenv('STUDENT_EMAIL_MAP')
+    if not student_email_map_json:
+        raise ValueError("Student email map not found in environment variables")
     
+    # Parse the JSON string to a dictionary
+    student_email_map = json.loads(student_email_map_json)
     return student_email_map.get(username)
 
 # Function to send email using SMTP

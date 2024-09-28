@@ -17,9 +17,6 @@ jobs:
       with:
         python-version: '3.x'
 
-    - name: List files for debugging
-      run: ls -R
-
     - name: Send notification to student
       run: |
         pip install requests
@@ -27,7 +24,7 @@ jobs:
       env:
         STUDENT_USERNAME: ${{ github.event.pull_request.user.login }}
         PR_LINK: ${{ github.event.pull_request.html_url }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         LESSONS_URL: "https://platforma-de-lessons.com/upload"
         EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
         EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+        STUDENT_EMAIL_MAP: ${{ secrets.STUDENT_EMAIL_MAP }}
