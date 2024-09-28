@@ -1,0 +1,28 @@
+name: Notify Students on PR Submission
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Send notification to student
+      run: |
+        pip install requests
+        python send_notification.py
+      env:
+        STUDENT_EMAIL: ${{ github.event.pull_request.user.email }}  # Correo del autor de la PR
+        PR_LINK: ${{ github.event.pull_request.html_url }}  # Link a la PR
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Secreto de autenticación
+        LESSONS_URL: "https://platforma-de-lessons.com/upload"  # URL para subir el link de la PR

@@ -164,6 +164,3 @@ cython_debug/
 
 # Katas_todo
 Katas_todo/*
-.github
-send_email_notification.py
-.github/*
