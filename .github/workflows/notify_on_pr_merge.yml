@@ -1,0 +1,57 @@
+name: Notify on PR Merge
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notify_pr_merge:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Get the latest merge commit message
+      id: get_commit_message
+      run: |
+        COMMIT_MESSAGE=$(git log -1 --pretty=%B)
+        echo "Commit message: $COMMIT_MESSAGE"
+        echo "commit_message=$COMMIT_MESSAGE" >> $GITHUB_ENV
+
+    - name: Extract PR number from the commit message
+      id: extract_pr_number
+      run: |
+        PR_NUMBER=$(echo "${{ env.commit_message }}" | grep -oP '(?<=#)\d+')
+        echo "PR number: $PR_NUMBER"
+        echo "pr_number=$PR_NUMBER" >> $GITHUB_ENV
+
+    - name: Get PR author
+      id: get_pr_author
+      run: |
+        if [ -z "${{ env.pr_number }}" ]; then
+          echo "No PR number found, skipping email notification."
+          exit 0
+        fi
+        PR_AUTHOR=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+                          -H "Accept: application/vnd.github.v3+json" \
+                          https://api.github.com/repos/${{ github.repository }}/pulls/${{ env.pr_number }} | jq -r '.user.login')
+        echo "PR author: $PR_AUTHOR"
+        echo "pr_author=$PR_AUTHOR" >> $GITHUB_ENV
+
+    - name: Send PR merge email
+      run: |
+        python src/scripts/send_email_notification.py --event "pr_merged"
+      env:
+        STUDENT_USERNAME: ${{ env.pr_author }}
+        PR_LINK: "https://github.com/${{ github.repository }}/pull/${{ env.pr_number }}"
+        EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
+        EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+        STUDENT_EMAIL_MAP: ${{ secrets.STUDENT_EMAIL_MAP }}
+        LESSONS_URL: "https://platforma-de-lessons.com/upload"
