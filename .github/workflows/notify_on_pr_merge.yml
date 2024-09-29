@@ -21,7 +21,7 @@ jobs:
     - name: Get the latest merge commit message
       id: get_commit_message
       run: |
-        COMMIT_MESSAGE=$(git log -1 --pretty=%B)
+        COMMIT_MESSAGE=$(git log -1 --pretty=%B | tr -d '\n\r')
         echo "Commit message: $COMMIT_MESSAGE"
         echo "commit_message=$COMMIT_MESSAGE" >> $GITHUB_ENV
 
@@ -29,16 +29,16 @@ jobs:
       id: extract_pr_number
       run: |
         PR_NUMBER=$(echo "${{ env.commit_message }}" | grep -oP '(?<=#)\d+')
+        if [ -z "$PR_NUMBER" ]; then
+          echo "No PR number found, skipping."
+          exit 0
+        fi
         echo "PR number: $PR_NUMBER"
         echo "pr_number=$PR_NUMBER" >> $GITHUB_ENV
 
     - name: Get PR author
       id: get_pr_author
       run: |
-        if [ -z "${{ env.pr_number }}" ]; then
-          echo "No PR number found, skipping email notification."
-          exit 0
-        fi
         PR_AUTHOR=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
                           -H "Accept: application/vnd.github.v3+json" \
                           https://api.github.com/repos/${{ github.repository }}/pulls/${{ env.pr_number }} | jq -r '.user.login')
