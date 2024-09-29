@@ -164,3 +164,4 @@ cython_debug/
 
 # Katas_todo
 Katas_todo/*
+src/secrets/students_email_map.json
