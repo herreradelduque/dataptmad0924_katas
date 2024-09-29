@@ -30,8 +30,8 @@ jobs:
       run: |
         PR_NUMBER=$(echo "${{ env.commit_message }}" | grep -oP '(?<=#)\d+')
         if [ -z "$PR_NUMBER" ]; then
-          echo "No PR number found, skipping."
-          exit 0
+          echo "No PR number found, skipping notification."
+          exit 0  # Safely exit if no PR number is found.
         fi
         echo "PR number: $PR_NUMBER"
         echo "pr_number=$PR_NUMBER" >> $GITHUB_ENV
@@ -54,4 +54,4 @@ jobs:
         EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
         EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
         STUDENT_EMAIL_MAP: ${{ secrets.STUDENT_EMAIL_MAP }}
-        LESSONS_URL: "https://account.ironhack.com/auth/realms/students/protocol/openid-connect/auth?client_id=student-portal&redirect_uri=https%3A%2F%2Fmy.ironhack.com%2Fjobs&state=fb7adf75-d676-43fd-aa3a-add8b7de54bd&response_mode=fragment&response_type=code&scope=openid&nonce=2fad9690-3368-46bc-95cd-965d38186efc"
+        LESSONS_URL: "https://account.ironhack.com/auth/realms/students/protocol/openid-connect/auth?client_id=student-portal&redirect_uri=https%3A%2F%2Fmy.
