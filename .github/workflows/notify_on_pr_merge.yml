@@ -59,3 +59,5 @@ jobs:
         EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
         STUDENT_EMAIL_MAP: ${{ secrets.STUDENT_EMAIL_MAP }}
         LESSONS_URL: "https://account.ironhack.com/auth/realms/students/protocol/openid-connect/auth?client_id=student-portal&redirect_uri=https%3A%2F%2Fmy.ironhack.com%2Fjobs&state=fb7adf75-d676-43fd-aa3a-add8b7de54bd&response_mode=fragment&response_type=code&scope=openid&nonce=2fad9690-3368-46bc-95cd-965d38186efc"
+
+        
