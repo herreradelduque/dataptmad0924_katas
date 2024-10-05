@@ -5,9 +5,9 @@ from collections import defaultdict
 GITHUB_TOKEN = 'YOUR_GITHUB_TOKEN'  # Replace with your GitHub token
 GITHUB_REPO = 'herreradelduque/dataptmad0924_katas'  # Replace with your repository
 
-# GitHub API endpoint for pull requests
-url = f'https://api.github.com/repos/{GITHUB_REPO}/pulls?state=closed'
-headers = {'Authorization': f'token {GITHUB_TOKEN}'}
+# GitHub API endpoint for closed pull requests
+BASE_URL = f'https://api.github.com/repos/{GITHUB_REPO}/pulls'
+HEADERS = {'Authorization': f'token {GITHUB_TOKEN}'}
 
 # Function to fetch pull requests with pagination handling
 def fetch_pull_requests():
@@ -16,12 +16,12 @@ def fetch_pull_requests():
     per_page = 100  # Set to maximum items per page
 
     while True:
-        response = requests.get(f"{url}&page={page}&per_page={per_page}", headers=headers)
+        response = requests.get(f"{BASE_URL}?state=closed&page={page}&per_page={per_page}", headers=HEADERS)
         response.raise_for_status()  # Raise an error for bad responses
         data = response.json()
-        
+
         if not data:
-            break  # Exit if there's no more data
+            break  # Exit loop if no more data
         
         pr_data.extend(data)
         page += 1  # Move to the next page
@@ -56,7 +56,8 @@ def main():
 
     # Print results
     print("\nPull Request Statistics:")
-    print(pr_stats)
+    for user, count in pr_stats.items():
+        print(f"{user}: {count} merges")
 
     print("\nDetailed Merged Pull Requests:")
     for pr in detailed_prs:
