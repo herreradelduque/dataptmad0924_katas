@@ -44,7 +44,7 @@ def main():
             pr_stats[user] = 1  # Initialize count for this user
 
     # Write stats to a JSON file
-    with open('pr_stats.json', 'w') as f:
+    with open('src/scripts/pr_stats.json', 'w') as f:
         json.dump({'users': pr_stats, 'detailed_prs': detailed_prs}, f, indent=4)
 
 if __name__ == "__main__":

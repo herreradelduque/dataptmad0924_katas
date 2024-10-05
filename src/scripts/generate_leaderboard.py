@@ -2,7 +2,7 @@ import json
 
 def main():
     # Load the JSON data from the file
-    with open('pr_stats.json', 'r') as f:
+    with open('src/scripts/pr_stats.json', 'r') as f:
         data = json.load(f)
 
     # Extract users and their merge counts
