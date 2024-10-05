@@ -1,35 +1,34 @@
 import json
-import os
 
-# Obtener datos del secret STUDENT_EMAIL_MAP
-STUDENT_EMAIL_MAP = json.loads(os.environ['STUDENT_EMAIL_MAP'])
+def main():
+    # Load the JSON data from the file
+    with open('pr_stats.json', 'r') as f:
+        data = json.load(f)
 
-# Leer el archivo pr_stats.json
-with open('pr_stats.json', 'r') as f:
-    stats = json.load(f)
+    # Extract users and their merge counts
+    users = data['users']
 
-# Inicializar variables para determinar el líder en merges
-leader = None
-max_merges = 0
+    # Determine the user with the most merges
+    if users:
+        top_user = max(users, key=users.get)  # Get the user with the highest count
+        max_merges = users[top_user]  # Number of merges for the top user
+    else:
+        top_user = None
+        max_merges = 0
 
-# Debugging: Print the stats structure to ensure it's as expected
-print("Stats structure:", stats)  # Print the structure for debugging
+    # Generate leaderboard markdown
+    leaderboard = "# Ranking de PR Mergeados\n\n"
+    if top_user:
+        leaderboard += f"El estudiante con más PR mergeados es: {top_user} con {max_merges} merges.\n"
+    else:
+        leaderboard += "No hay merges registrados.\n"
 
-# Verificar que 'users' está en stats
-if 'users' in stats:
-    # Buscar al usuario con más merges
-    for user, data in stats['users'].items():
-        if isinstance(data, dict) and 'merge_count' in data:  # Ensure data is a dict and has 'merge_count'
-            if data['merge_count'] > max_merges:
-                leader = user
-                max_merges = data['merge_count']
-else:
-    print("No 'users' key found in stats")
+    # Save leaderboard to a file
+    with open('leaderboard.md', 'w') as f:
+        f.write(leaderboard)
 
-# Obtener el nombre real del usuario o usar el username si no está en el secret
-leader_name = STUDENT_EMAIL_MAP.get(leader, [None, leader])[1]  # Nombre real o username si no existe
+    # Print the leaderboard for verification
+    print(leaderboard)
 
-# Crear el archivo leaderboard.md con la información
-with open('leaderboard.md', 'w') as f:
-    f.write('## Ranking de PR Mergeados\n\n')
-    f.write(f'El estudiante con más PR mergeados es: **{leader_name}** con **{max_merges}** merges.\n')
+if __name__ == "__main__":
+    main()
