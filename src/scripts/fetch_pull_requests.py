@@ -1,53 +1,66 @@
-import os
-import json
 import requests
+from collections import defaultdict
 
-# Environment variables for GitHub Actions
-GITHUB_REPO = os.environ.get('GITHUB_REPOSITORY')  # 'owner/repo' format
-GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN')  # The secret token
+# Configuration
+GITHUB_TOKEN = 'YOUR_GITHUB_TOKEN'  # Replace with your GitHub token
+GITHUB_REPO = 'herreradelduque/dataptmad0924_katas'  # Replace with your repository
 
-# Function to fetch closed pull requests
+# GitHub API endpoint for pull requests
+url = f'https://api.github.com/repos/{GITHUB_REPO}/pulls?state=closed'
+headers = {'Authorization': f'token {GITHUB_TOKEN}'}
+
+# Function to fetch pull requests with pagination handling
 def fetch_pull_requests():
-    url = f"https://api.github.com/repos/{GITHUB_REPO}/pulls?state=closed"
-    headers = {
-        "Authorization": f"token {GITHUB_TOKEN}",
-        "Accept": "application/vnd.github.v3+json"
-    }
-    response = requests.get(url, headers=headers)  # Using headers for authentication
-    response.raise_for_status()  # Raise an error for bad responses
-    return response.json()
+    pr_data = []
+    page = 1
+    per_page = 100  # Set to maximum items per page
 
-# Main function to process the pull requests and count merges
-def main():
-    pr_data = fetch_pull_requests()  # Fetch closed PRs
-    pr_stats = {}
-    detailed_prs = []  # To hold detailed PR info
+    while True:
+        response = requests.get(f"{url}&page={page}&per_page={per_page}", headers=headers)
+        response.raise_for_status()  # Raise an error for bad responses
+        data = response.json()
+        
+        if not data:
+            break  # Exit if there's no more data
+        
+        pr_data.extend(data)
+        page += 1  # Move to the next page
+
+    return pr_data
+
+# Function to process and count merged pull requests
+def process_pull_requests(pr_data):
+    pr_stats = defaultdict(int)  # Store counts of merged PRs
+    detailed_prs = []
 
     for pr in pr_data:
-        user = pr['user']['login']  # Get the username of the PR author
-        title = pr['title']          # Get the title of the PR
-        merged_at = pr['merged_at']  # Get the date when PR was merged
+        user = pr['user']['login']
+        merged_at = pr.get('merged_at')
 
-        # Only count merged PRs
-        if merged_at:
-            # Collect additional information
-            pr_details = {
-                'title': title,
+        if merged_at:  # Only count merged PRs
+            pr_stats[user] += 1
+            detailed_prs.append({
+                'title': pr['title'],
                 'merged_at': merged_at,
-                'url': pr['html_url'],  # Get the URL of the PR
+                'url': pr['html_url'],
                 'user': user
-            }
-            detailed_prs.append(pr_details)
+            })
+    
+    return pr_stats, detailed_prs
 
-            # Count merges
-            if user in pr_stats:
-                pr_stats[user] += 1  # Increment the count for this user
-            else:
-                pr_stats[user] = 1  # Initialize count for this user
+# Main function
+def main():
+    print("Fetching pull requests...")
+    pr_data = fetch_pull_requests()
+    pr_stats, detailed_prs = process_pull_requests(pr_data)
 
-    # Write stats to a JSON file
-    with open('src/scripts/pr_stats.json', 'w') as f:
-        json.dump({'users': pr_stats, 'detailed_prs': detailed_prs}, f, indent=4)
+    # Print results
+    print("\nPull Request Statistics:")
+    print(pr_stats)
+
+    print("\nDetailed Merged Pull Requests:")
+    for pr in detailed_prs:
+        print(f"{pr['title']} by {pr['user']} was merged at {pr['merged_at']}. URL: {pr['url']}")
 
 if __name__ == "__main__":
     main()
