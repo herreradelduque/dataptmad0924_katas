@@ -1,3 +1,3 @@
-## Ranking de PR Mergeados
+# Ranking de PR Mergeados
 
-El estudiante con más PR mergeados es: **None** con **0** merges.
+El estudiante con más PR mergeados es: herreradelduque con 29 merges.
