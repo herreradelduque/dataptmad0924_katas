@@ -8,18 +8,16 @@ def main():
     # Extract users and their merge counts
     users = data['users']
 
-    # Determine the user with the most merges
-    if users:
-        top_user = max(users, key=users.get)  # Get the user with the highest count
-        max_merges = users[top_user]  # Number of merges for the top user
-    else:
-        top_user = None
-        max_merges = 0
+    # Filter out 'herreradelduque' and sort users by their merge counts
+    filtered_users = {user: count for user, count in users.items() if user != 'herreradelduque'}
+    sorted_users = sorted(filtered_users.items(), key=lambda x: x[1], reverse=True)[:5]  # Top 5
 
     # Generate leaderboard markdown
     leaderboard = "# Ranking de PR Mergeados\n\n"
-    if top_user:
-        leaderboard += f"El estudiante con más PR mergeados es: {top_user} con {max_merges} merges.\n"
+    
+    if sorted_users:
+        for user, merges in sorted_users:
+            leaderboard += f"{user}: {merges} merges\n"
     else:
         leaderboard += "No hay merges registrados.\n"
 
