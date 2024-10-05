@@ -10,11 +10,13 @@ def main():
 
     # Filter out 'herreradelduque' and sort users by their merge counts
     filtered_users = {user: count for user, count in users.items() if user != 'herreradelduque'}
-    sorted_users = sorted(filtered_users.items(), key=lambda x: x[1], reverse=True)[:5]  # Top 5
+
+    # Sort users and select the top 5
+    sorted_users = sorted(filtered_users.items(), key=lambda x: x[1], reverse=True)[:5]
 
     # Generate leaderboard markdown
     leaderboard = "# Ranking de PR Mergeados\n\n"
-    
+
     if sorted_users:
         for user, merges in sorted_users:
             leaderboard += f"{user}: {merges} merges\n"
