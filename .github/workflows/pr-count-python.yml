@@ -1,0 +1,42 @@
+name: PR-Count Update Merge Leaderboard with Python
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  update_leaderboard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests  # Install the requests module
+
+      - name: Run PR Count Script
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Ensure this secret is added
+        run: |
+          python3 src/scripts/pr-count.py  # Adjust the path as necessary
+
+      - name: Generate Merge Leaderboard
+        env:
+          STUDENT_EMAIL_MAP: ${{ secrets.STUDENT_EMAIL_MAP }}  # Importamos el secret
+        run: |
+          python3 src/scripts/generate_leaderboard.py  # Adjust the path as necessary
+
+      - name: Commit and push updated leaderboard
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "GitHub Actions"
+          git add leaderboard.md
+          git commit -m "Update merge leaderboard" || echo "No changes to commit"
+          git push
