@@ -5,6 +5,12 @@
     },
     "detailed_prs": [
         {
+            "title": "updated merges count",
+            "merged_at": "2024-10-05T15:54:46Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/64",
+            "user": "herreradelduque"
+        },
+        {
             "title": "Updated rank",
             "merged_at": "2024-10-05T15:44:11Z",
             "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/63",
@@ -176,12 +182,6 @@
             "title": "Feat/pr",
             "merged_at": null,
             "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/27",
-            "user": "herreradelduque"
-        },
-        {
-            "title": "Feat/pr",
-            "merged_at": null,
-            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/26",
             "user": "herreradelduque"
         }
     ]
