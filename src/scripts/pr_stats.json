@@ -6,6 +6,12 @@
     "detailed_prs": [
         {
             "title": "updates",
+            "merged_at": "2024-10-05T16:31:49Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/69",
+            "user": "herreradelduque"
+        },
+        {
+            "title": "updates",
             "merged_at": "2024-10-05T16:25:45Z",
             "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/68",
             "user": "herreradelduque"
@@ -177,12 +183,6 @@
             "merged_at": "2024-10-05T07:43:40Z",
             "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/33",
             "user": "Kristinawk"
-        },
-        {
-            "title": "updated documentation and new features",
-            "merged_at": "2024-09-29T20:35:09Z",
-            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/31",
-            "user": "herreradelduque"
         }
     ]
 }
