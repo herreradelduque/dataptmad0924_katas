@@ -26,4 +26,3 @@ else:
 # Write to leaderboard.md
 with open('leaderboard.md', 'w') as f:
     f.write('\n'.join(leaderboard_lines))
-
