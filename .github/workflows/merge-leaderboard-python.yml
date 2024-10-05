@@ -1,0 +1,40 @@
+name: Update Merge Leaderboard with Python
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  update_leaderboard:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Checkout repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.x'
+
+      # Step 3: Install dependencies (optional, can be removed if none)
+      - name: Install dependencies (if any)
+        run: |
+          python -m pip install --upgrade pip
+
+      # Step 4: Run Python Script to generate the leaderboard
+      - name: Generate Merge Leaderboard
+        env:
+          STUDENT_EMAIL_MAP: ${{ secrets.STUDENT_EMAIL_MAP }}  # Import the secret
+        run: |
+          python3 src/scripts/generate_leaderboard.py  # If it's in root directory, change the path if in another directory
+
+      # Step 5: Commit and push the updated leaderboard file
+      - name: Commit and push updated leaderboard
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "GitHub Actions"
+          git add leaderboard.md
+          git commit -m "Update merge leaderboard"
+          git push
