@@ -8,20 +8,19 @@ def main():
     # Extract users and their merge counts
     users = data['users']
 
-    # Filter out 'herreradelduque' and sort users by their merge counts
-    filtered_users = {user: count for user, count in users.items() if user != 'herreradelduque'}
+    # Exclude specified user
+    excluded_user = "herreradelduque"
+    filtered_users = {user: count for user, count in users.items() if user != excluded_user}
 
-    # Sort users and select the top 5
-    sorted_users = sorted(filtered_users.items(), key=lambda x: x[1], reverse=True)[:5]
+    # Sort users by the number of merges in descending order
+    sorted_users = sorted(filtered_users.items(), key=lambda x: x[1], reverse=True)
 
     # Generate leaderboard markdown
     leaderboard = "# Ranking de PR Mergeados\n\n"
-
-    if sorted_users:
-        for user, merges in sorted_users:
-            leaderboard += f"{user}: {merges} merges\n"
-    else:
-        leaderboard += "No hay merges registrados.\n"
+    
+    # Generate the top 5 leaderboard
+    for user, merge_count in sorted_users[:5]:
+        leaderboard += f"**{user}**: {merge_count} merges\n"
 
     # Save leaderboard to a file
     with open('leaderboard.md', 'w') as f:
