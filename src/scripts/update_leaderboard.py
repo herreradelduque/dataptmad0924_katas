@@ -5,7 +5,7 @@ import os
 students = json.loads(os.environ['STUDENT_EMAIL_MAP'])
 
 # Leer pr_stats.json
-with open('pr_stats.json', 'r') as f:
+with open('src/scripts/pr_stats.json', 'r') as f:
     stats = json.load(f)
 
 # Buscar al usuario con más merges
