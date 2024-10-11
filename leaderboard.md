@@ -1,3 +1,3 @@
 # Ranking de PR Mergeados
 
-**Kristinawk**: 1 merges
+**chowira**: 1 merges

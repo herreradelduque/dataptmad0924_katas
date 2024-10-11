@@ -1,7 +1,7 @@
 {
     "users": {
         "herreradelduque": 29,
-        "Kristinawk": 1
+        "chowira": 1
     },
     "detailed_prs": [
         {
@@ -179,10 +179,10 @@
             "user": "herreradelduque"
         },
         {
-            "title": "kata-banking-system-kristina",
-            "merged_at": "2024-10-05T07:43:40Z",
-            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/33",
-            "user": "Kristinawk"
+            "title": "kata-supermarket-queue[jose]",
+            "merged_at": "2024-10-11T11:21:50Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/38",
+            "user": "chowira"
         }
     ]
 }
