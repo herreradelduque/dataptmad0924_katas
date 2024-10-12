@@ -3,14 +3,14 @@ import json
 import pandas as pd
 import requests
 
-# Environment variables for GitHub Actions
+# Use built-in GITHUB_TOKEN
 GITHUB_REPO = os.getenv('GITHUB_REPOSITORY')
 if GITHUB_REPO is None:
     raise ValueError("GITHUB_REPOSITORY environment variable not set.")
 
-GITHUB_TOKEN = os.getenv('GITHUB_TOKEN')
+GITHUB_TOKEN = os.getenv('GITHUB_TOKEN')  # This will use the built-in token
 if GITHUB_TOKEN is None:
-    raise ValueError("GITHUB_TOKEN environment variable not set.")
+    print("Warning: GITHUB_TOKEN environment variable not set. Using the built-in token.")
 
 # Extract owner and repo
 owner, repo = GITHUB_REPO.split('/')
