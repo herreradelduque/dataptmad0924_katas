@@ -25,12 +25,6 @@ jobs:
         run: |
           pip list
         
-      - name: Run PR Count Script
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Ensure the correct token is referenced
-        run: |
-          python3 src/scripts/pr-count.py
-        
       - name: Run Generate Leaderboard Script
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Ensure the correct token is referenced
