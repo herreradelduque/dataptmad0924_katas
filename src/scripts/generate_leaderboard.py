@@ -8,9 +8,9 @@ GITHUB_REPO = os.getenv('GITHUB_REPOSITORY')
 if GITHUB_REPO is None:
     raise ValueError("GITHUB_REPOSITORY environment variable not set.")
 
-GITHUB_TOKEN = os.getenv('GITHUB_TOKEN')  # This will use the built-in token
+GITHUB_TOKEN = os.getenv('GITHUB_TOKEN')
 if GITHUB_TOKEN is None:
-    print("Warning: GITHUB_TOKEN environment variable not set. Using the built-in token.")
+    print("Warning: GITHUB_TOKEN environment variable not set. Using default token.")
 
 # Extract owner and repo
 owner, repo = GITHUB_REPO.split('/')

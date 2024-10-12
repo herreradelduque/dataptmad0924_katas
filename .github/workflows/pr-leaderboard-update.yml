@@ -27,6 +27,7 @@ jobs:
         
       - name: Generate Merge Leaderboard
         env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Use GitHub token for push
           STUDENT_EMAIL_MAP: ${{ secrets.STUDENT_EMAIL_MAP }}  # Import secret for email mapping
         run: |
           python3 src/scripts/generate_leaderboard.py  # Adjust the path if necessary
