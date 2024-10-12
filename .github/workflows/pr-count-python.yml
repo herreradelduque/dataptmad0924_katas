@@ -27,7 +27,7 @@ jobs:
 
       - name: Run PR Count Script
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Use this secret to authenticate GitHub API requests
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use this secret to authenticate GitHub API requests
         run: |
           python3 src/scripts/pr-count.py  # Adjust the path as necessary
 
