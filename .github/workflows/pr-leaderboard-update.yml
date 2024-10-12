@@ -1,8 +1,8 @@
-name: PR-Count Update and Generate Leaderboard
+name: Generate Leaderboard
 
 on:
   pull_request:
-    types: [closed]
+    types: [closed]  # This triggers the action whenever a pull request is closed.
 
 jobs:
   update_leaderboard:
@@ -10,6 +10,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Ensure the full history is fetched for accurate updates
 
       - name: Set up Python
         uses: actions/setup-python@v3
@@ -25,7 +27,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python3 src/scripts/generate_leaderboard_script.py  # Adjust the path as necessary
+          python3 src/scripts/generate_leaderboard.py  # Adjust the path as necessary
 
       - name: Commit and push updated leaderboard
         env:
