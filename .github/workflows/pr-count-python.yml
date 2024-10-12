@@ -1,4 +1,4 @@
-name: PR-Count Update Merge Leaderboard with Python
+name: PR-Count
 
 on:
   pull_request:
