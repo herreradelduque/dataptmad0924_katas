@@ -16,10 +16,14 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install dependencies
+      - name: Install Python dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install requests  # Install requests if it's required by your scripts
+            python -m pip install --upgrade pip
+            pip install -r src/scripts/requirements.txt  # Adjust this path if necessary
+        
+      - name: List installed packages
+        run: |
+            pip list
 
       - name: Run PR Count Script
         env:
