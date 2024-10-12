@@ -18,30 +18,29 @@ jobs:
 
       - name: Install Python dependencies
         run: |
-            python -m pip install --upgrade pip
-            pip install -r src/scripts/requirements.txt  # Adjust this path if necessary
+          python -m pip install --upgrade pip
+          pip install -r src/scripts/requirements.txt
         
       - name: List installed packages
         run: |
-            pip list
+          pip list
 
       - name: Run PR Count Script
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Use this secret to authenticate GitHub API requests
         run: |
-          python3 src/scripts/pr-count.py  # Adjust the path as necessary
+          python3 src/scripts/pr-count.py
 
       - name: Run Generate Leaderboard Script
         env:
           STUDENT_EMAIL_MAP: ${{ secrets.STUDENT_EMAIL_MAP }}  # Import the secret for email mapping
         run: |
-          python3 src/scripts/generate_leaderboard.py  # Adjust the path as necessary
+          python3 src/scripts/generate_leaderboard.py
 
       - name: Commit and push updated stats
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "GitHub Actions"
-          git add src/scripts/pr_stats.json leaderboard.md  # Add both files to commit
+          git add src/scripts/pr_stats.json leaderboard.md
           git commit -m "Update PR stats and leaderboard" || echo "No changes to commit"
-          git pull origin main --rebase  # Pull the latest changes from the main branch
-          git push origin main  # Push to the main branch
+          git push origin HEAD:${{ github.event.pull_request.base.ref }}  # Push to the base branch
