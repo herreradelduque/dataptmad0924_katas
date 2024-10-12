@@ -1,9 +1,14 @@
 {
     "users": {
-        "herreradelduque": 29,
-        "chowira": 1
+        "herreradelduque": 30
     },
     "detailed_prs": [
+        {
+            "title": "update",
+            "merged_at": "2024-10-12T09:31:02Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/74",
+            "user": "herreradelduque"
+        },
         {
             "title": "updates",
             "merged_at": "2024-10-05T16:31:49Z",
@@ -177,12 +182,6 @@
             "merged_at": null,
             "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/41",
             "user": "herreradelduque"
-        },
-        {
-            "title": "kata-supermarket-queue[jose]",
-            "merged_at": "2024-10-11T11:21:50Z",
-            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/38",
-            "user": "chowira"
         }
     ]
 }
