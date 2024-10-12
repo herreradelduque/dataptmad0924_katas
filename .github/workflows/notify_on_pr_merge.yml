@@ -43,7 +43,7 @@ jobs:
           echo "No PR number found, skipping email notification."
           exit 0
         fi
-        PR_AUTHOR=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+        PR_AUTHOR=$(curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
                           -H "Accept: application/vnd.github.v3+json" \
                           https://api.github.com/repos/${{ github.repository }}/pulls/${{ env.pr_number }} | jq -r '.user.login')
         echo "PR author: $PR_AUTHOR"

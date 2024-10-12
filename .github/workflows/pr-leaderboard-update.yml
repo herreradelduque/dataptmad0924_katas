@@ -33,7 +33,7 @@ jobs:
 
       - name: Commit and push updated leaderboard
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use GitHub token for push
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Use GitHub token for push
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "GitHub Actions"
