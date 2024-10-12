@@ -21,7 +21,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt  # Install from the requirements.txt file
+          pip install -r src/scripts/requirements.txt  # Install from the requirements.txt file
 
       - name: Run PR Leaderboard Script
         env:
