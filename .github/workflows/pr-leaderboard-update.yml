@@ -1,8 +1,8 @@
-name: PR-Count Update and Generate Leaderboard
+name: PR-Count Update Merge Leaderboard with Python
 
 on:
   pull_request:
-    types: [closed]  # Trigger when a pull request is closed (including merges)
+    types: [closed]
 
 jobs:
   update_leaderboard:
@@ -10,32 +10,33 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0  # Fetch the entire history for accurate updates
 
       - name: Set up Python
         uses: actions/setup-python@v3
         with:
-          python-version: '3.x'  # Specify the Python version if needed, e.g., '3.9'
+          python-version: '3.x'
 
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r src/scripts/requirements.txt  # Install from the requirements.txt file
-
-      - name: Run PR Leaderboard Script
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          pip install -r src/scripts/requirements.txt  # Adjust this path if necessary
+      
+      - name: List installed packages
         run: |
-          python3 src/scripts/generate_leaderboard.py  # Adjust the path as necessary
+          pip list
+        
+      - name: Generate Merge Leaderboard
+        env:
+          STUDENT_EMAIL_MAP: ${{ secrets.STUDENT_EMAIL_MAP }}  # Import secret for email mapping
+        run: |
+          python3 src/scripts/generate_leaderboard.py  # Adjust the path if necessary
 
       - name: Commit and push updated leaderboard
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use GitHub token for push
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "GitHub Actions"
-          git add ranking_output.md  # Add the generated markdown file
-          git commit -m "Update PR leaderboard"
-          git pull --rebase origin ${{ github.event.pull_request.base.ref }}
-          git push origin HEAD:${{ github.event.pull_request.base.ref }} || echo "No changes to commit"
+          git add leaderboard.md
+          git commit -m "Update merge leaderboard" || echo "No changes to commit"  # Avoid error if there's nothing to commit
+          git push origin HEAD:${{ github.event.pull_request.base.ref }}  # Push to the base branch
