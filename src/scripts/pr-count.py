@@ -4,7 +4,9 @@ import requests
 
 # Environment variables for GitHub Actions
 GITHUB_REPO = os.environ.get('GITHUB_REPOSITORY')  # 'owner/repo' format
-GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN')  # The secret token
+GITHUB_TOKEN = os.getenv('GITHUB_TOKEN')
+if GITHUB_TOKEN is None:
+    print("Warning: GITHUB_TOKEN environment variable not set. Using default token.")
 
 # Function to fetch closed pull requests
 def fetch_pull_requests():

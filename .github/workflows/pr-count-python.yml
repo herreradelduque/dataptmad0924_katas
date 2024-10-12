@@ -24,16 +24,17 @@ jobs:
       - name: List installed packages
         run: |
           pip list
-
+        
       - name: Run PR Count Script
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Use this secret to authenticate GitHub API requests
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Ensure the correct token is referenced
         run: |
           python3 src/scripts/pr-count.py
 
       - name: Run Generate Leaderboard Script
         env:
-          STUDENT_EMAIL_MAP: ${{ secrets.STUDENT_EMAIL_MAP }}  # Import the secret for email mapping
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Ensure the correct token is referenced
+          STUDENT_EMAIL_MAP: ${{ secrets.STUDENT_EMAIL_MAP }} 
         run: |
           python3 src/scripts/generate_leaderboard.py
 
@@ -43,4 +44,5 @@ jobs:
           git config --local user.name "GitHub Actions"
           git add src/scripts/pr_stats.json leaderboard.md
           git commit -m "Update PR stats and leaderboard" || echo "No changes to commit"
-          git push origin HEAD:${{ github.event.pull_request.base.ref }}  # Push to the base branch
+          git pull origin main --rebase
+          git push origin main
