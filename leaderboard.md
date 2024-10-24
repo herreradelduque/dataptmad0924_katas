@@ -1,2 +1,0 @@
-# Ranking de PR Mergeados
-
