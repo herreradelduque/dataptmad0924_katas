@@ -1,8 +1,29 @@
 {
     "users": {
-        "herreradelduque": 30
+        "martingonzalezr001": 1,
+        "Paulcorreafl": 2,
+        "herreradelduque": 26,
+        "Kristinawk": 1
     },
     "detailed_prs": [
+        {
+            "title": "html-css-colors [Martin Gonzalez]",
+            "merged_at": "2024-11-01T18:43:16Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/94",
+            "user": "martingonzalezr001"
+        },
+        {
+            "title": "kata-supermarket-queue-Paul",
+            "merged_at": null,
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/93",
+            "user": "Paulcorreafl"
+        },
+        {
+            "title": "[kata-banking-system] Paul Correa",
+            "merged_at": null,
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/92",
+            "user": "Paulcorreafl"
+        },
         {
             "title": "updates",
             "merged_at": "2024-10-12T11:56:06Z",
@@ -112,6 +133,12 @@
             "user": "herreradelduque"
         },
         {
+            "title": "[kata-groupby-sum] kristina",
+            "merged_at": "2024-10-24T17:04:42Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/71",
+            "user": "Kristinawk"
+        },
+        {
             "title": "updates",
             "merged_at": "2024-10-05T16:31:49Z",
             "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/69",
@@ -157,30 +184,6 @@
             "title": "refactored path",
             "merged_at": "2024-10-05T15:23:53Z",
             "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/62",
-            "user": "herreradelduque"
-        },
-        {
-            "title": "Update merge leaderboard",
-            "merged_at": null,
-            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/61",
-            "user": "herreradelduque"
-        },
-        {
-            "title": "Update merge leaderboard",
-            "merged_at": "2024-10-05T15:10:44Z",
-            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/60",
-            "user": "herreradelduque"
-        },
-        {
-            "title": "added G.A. leaderboard",
-            "merged_at": null,
-            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/59",
-            "user": "herreradelduque"
-        },
-        {
-            "title": "added G.A. leaderboard",
-            "merged_at": null,
-            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/58",
             "user": "herreradelduque"
         }
     ]
