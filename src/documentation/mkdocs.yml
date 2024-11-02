@@ -8,7 +8,6 @@ nav:
   - GitErrors and common solutions:
       - Git Concepts Basics: git-docu/git-basics.md
       - Git Errores Frecuentes en Git: git-docu/common-errors.md
-      - Git workflows: git-docu/workflows.md
   - mkdocs:
       - Update docs in GitHub Pages: teacher/publication_ghpages.md
 
