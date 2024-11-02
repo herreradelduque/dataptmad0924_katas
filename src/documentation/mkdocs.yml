@@ -5,6 +5,8 @@ repo_url: "https://github.com/herreradelduque/katas0924"
 # Navegación del sitio
 nav:
   - Inicio: index.md
+  - Leaderboard: 
+      - Intro to Katas: katas/leaderboard.md
   - Katas:
       - Intro to Katas: katas/intro-to-katas.md
   - Git - Errors and common solutions:
