@@ -17,9 +17,3 @@ nav:
 # Theme Configuration
 theme:
   name: material
-  palette:
-    primary: 'indigo'
-    accent: 'pink'
-  font:
-    text: 'Roboto'
-    code: 'Roboto Mono'
