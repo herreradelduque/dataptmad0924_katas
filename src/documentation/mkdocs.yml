@@ -7,7 +7,7 @@ nav:
       - Leaderboard: katas/leaderboard.md  # Ensure this file exists
   - Katas:
       - Intro to Katas: katas/intro-to-katas.md  # Ensure this file exists
-  - Git - Errors and common solutions:
+  - GitErrors and common solutions:
       - Git Concepts Basics: git-docu/git-basics.md  # Ensure this file exists
       - Git Errores Frecuentes en Git: git-docu/common-errors.md  # Ensure this file exists
       - Git workflows: git-docu/workflows.md  # Ensure this file exists
@@ -23,19 +23,3 @@ theme:
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
-
-# Plugins and Extensions
-plugins:
-  - search
-
-markdown_extensions:
-  - toc:
-      permalink: true
-  - admonition
-  - codehilite
-  - footnotes
-  - tables
-
-# Custom Styles
-extra_css:
-  - 'styles/extra.css'  # Ensure this path is correct
