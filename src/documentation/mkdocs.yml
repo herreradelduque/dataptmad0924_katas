@@ -12,7 +12,7 @@ nav:
   - Git - Errors and common solutions:
       - Git Concepts Basics: git-docu/git-basics.md  # Ensure this file exists
       - Git Errores Frecuentes en Git: git-docu/common-errors.md  # Ensure this file exists
-      - Git workflows: git/workflows.md  # Ensure this file exists
+      - Git workflows: git-docu/workflows.md  # Ensure this file exists
   - mkdocs:
       - Update docs in GitHub Pages: teacher/publication_ghpages.md  # Ensure this file exists
 
