@@ -1,9 +1,8 @@
 site_name: "Ironhack Katas Training0"
 
 nav:
-  - Inicio: index.md
-  - Leaderboard: 
-      - Leaderboard: katas/leaderboard.md
+  - index.md
+  - leaderboard.md
 
 theme:
   name: material
