@@ -6,13 +6,13 @@ repo_url: "https://github.com/herreradelduque/katas0924"
 nav:
   - Inicio: index.md
   - Katas:
-      - Introducción a las Katas: katas/intro-to-katas.md
+      - Intro to Katas: katas/intro-to-katas.md
+  - Git - Errors and common solutions:
+      - Git Concepts Basics: git/git-basics.md
+      - Git Errores Frecuentes en Git: git/common-errors.md
+      - Git workflows: git/workflows.md
   - mkdocs:
-      - Publicación en GitHub Pages: teacher/publication_ghpages.md
-  - Git - Errores y Soluciones Comunes:
-      - Conceptos Básicos de Git: git/conceptos_basicos.md
-      - Errores Frecuentes en Git: git/errores_frecuentes.md
-      - Flujos de Trabajo con Git: git/flujo_trabajo.md
+      - Update docs in GitHub Pages: teacher/publication_ghpages.md
 
 # Tema y configuración
 theme:
