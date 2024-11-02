@@ -1,19 +1,17 @@
-site_name: "Ironhack Katas Training0"  # Title of the site
+site_name: "Ironhack Katas Training0"
 
-# Site Navigation
 nav:
   - Inicio: index.md
   - Leaderboard: 
-      - Leaderboard: katas/leaderboard.md  # Ensure this file exists
+      - Leaderboard: katas/leaderboard.md
   - Katas:
-      - Intro to Katas: katas/intro-to-katas.md  # Ensure this file exists
+      - Intro to Katas: katas/intro-to-katas.md
   - GitErrors and common solutions:
-      - Git Concepts Basics: git-docu/git-basics.md  # Ensure this file exists
-      - Git Errores Frecuentes en Git: git-docu/common-errors.md  # Ensure this file exists
-      - Git workflows: git-docu/workflows.md  # Ensure this file exists
+      - Git Concepts Basics: git-docu/git-basics.md
+      - Git Errores Frecuentes en Git: git-docu/common-errors.md
+      - Git workflows: git-docu/workflows.md
   - mkdocs:
-      - Update docs in GitHub Pages: teacher/publication_ghpages.md  # Ensure this file exists
+      - Update docs in GitHub Pages: teacher/publication_ghpages.md
 
-# Theme Configuration
 theme:
   name: material
