@@ -6,14 +6,9 @@ repo_url: "https://github.com/herreradelduque/katas0924"
 nav:
   - Inicio: index.md
   - Katas:
-      - Introducción a las Katas: katas/introduccion.md
-      - Kata 1 - Variables: katas/kata1_variables.md
-      - Kata 2 - Funciones: katas/kata2_funciones.md
-      - Kata 3 - Bucles: katas/kata3_bucles.md
-      - Kata 4 - Listas y Diccionarios: katas/kata4_listas_diccionarios.md
-  - Profesor:
-      - Configuración de MkDocs: profesor/configuracion_mkdocs.md
-      - Publicación en GitHub Pages: profesor/publicacion_ghpages.md
+      - Introducción a las Katas: katas/intro-to-katas.md
+  - mkdocs:
+      - Publicación en GitHub Pages: teacher/publication_ghpages.md
   - Git - Errores y Soluciones Comunes:
       - Conceptos Básicos de Git: git/conceptos_basicos.md
       - Errores Frecuentes en Git: git/errores_frecuentes.md
