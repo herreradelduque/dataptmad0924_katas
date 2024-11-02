@@ -4,12 +4,6 @@ nav:
   - Inicio: index.md
   - Leaderboard: 
       - Leaderboard: katas/leaderboard.md
-      - Intro to Katas: katas/intro-to-katas.md      
-  - GitErrors and common solutions:
-      - Git Concepts Basics: git-docu/git-basics.md
-      - Git Errores Frecuentes en Git: git-docu/common-errors.md
-  - mkdocs:
-      - Update docs in GitHub Pages: teacher/publication_ghpages.md
 
 theme:
   name: material
