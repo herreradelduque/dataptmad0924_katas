@@ -1,0 +1,9 @@
+site_name: "Ironhack Katas Training"
+
+nav:
+  - Home: index.md
+  - Leaderboard: leaderboard.md
+  - Q&A: questions.md
+
+theme:
+  name: material
