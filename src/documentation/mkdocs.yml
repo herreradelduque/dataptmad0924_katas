@@ -1,22 +1,22 @@
-site_name: "Ironhack Katas Training3"
-site_url: "https://herreradelduque.github.io/dataptmad0924_docu"
-repo_url: "https://github.com/herreradelduque/dataptmad0924_katas"
+site_name: "Ironhack Katas Training3"  # Title of the site
+site_url: "https://herreradelduque.github.io/dataptmad0924_katas"  # Correct if using this repo
+repo_url: "https://github.com/herreradelduque/dataptmad0924_katas"  # Correct repository URL
 
-# Navegación del sitio
+# Site Navigation
 nav:
   - Inicio: index.md
   - Leaderboard: 
-      - Leaderboar: katas/leaderboard.md
+      - Leaderboard: katas/leaderboard.md  # Ensure this file exists
   - Katas:
-      - Intro to Katas: katas/intro-to-katas.md
+      - Intro to Katas: katas/intro-to-katas.md  # Ensure this file exists
   - Git - Errors and common solutions:
-      - Git Concepts Basics: git/git-basics.md
-      - Git Errores Frecuentes en Git: git/common-errors.md
-      - Git workflows: git/workflows.md
+      - Git Concepts Basics: git/git-basics.md  # Ensure this file exists
+      - Git Errores Frecuentes en Git: git/common-errors.md  # Ensure this file exists
+      - Git workflows: git/workflows.md  # Ensure this file exists
   - mkdocs:
-      - Update docs in GitHub Pages: teacher/publication_ghpages.md
+      - Update docs in GitHub Pages: teacher/publication_ghpages.md  # Ensure this file exists
 
-# Tema y configuración
+# Theme Configuration
 theme:
   name: material
   palette:
@@ -26,7 +26,7 @@ theme:
     text: 'Roboto'
     code: 'Roboto Mono'
 
-# Plugins y extensiones opcionales
+# Plugins and Extensions
 plugins:
   - search
 
@@ -38,6 +38,6 @@ markdown_extensions:
   - footnotes
   - tables
 
-# Opciones de personalización
+# Custom Styles
 extra_css:
-  - 'styles/extra.css'
+  - 'styles/extra.css'  # Ensure this path is correct
