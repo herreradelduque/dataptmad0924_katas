@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://herreradelduque.github.io/dataptmad0924_docu/</loc>
+         <loc>https://herreradelduque.github.io/dataptmad0924_katas/src/documentation/docs/index.md/</loc>
          <lastmod>2024-11-02</lastmod>
     </url>
     <url>
-         <loc>https://herreradelduque.github.io/dataptmad0924_docu/git/common-errors/</loc>
+         <loc>https://herreradelduque.github.io/dataptmad0924_katas/src/documentation/docs/index.md/git-docu/common-errors/</loc>
          <lastmod>2024-11-02</lastmod>
     </url>
     <url>
-         <loc>https://herreradelduque.github.io/dataptmad0924_docu/git/git-basics/</loc>
+         <loc>https://herreradelduque.github.io/dataptmad0924_katas/src/documentation/docs/index.md/git-docu/git-basics/</loc>
          <lastmod>2024-11-02</lastmod>
     </url>
     <url>
-         <loc>https://herreradelduque.github.io/dataptmad0924_docu/git/workflows/</loc>
+         <loc>https://herreradelduque.github.io/dataptmad0924_katas/src/documentation/docs/index.md/git-docu/workflows/</loc>
          <lastmod>2024-11-02</lastmod>
     </url>
     <url>
-         <loc>https://herreradelduque.github.io/dataptmad0924_docu/katas/intro-to-katas/</loc>
+         <loc>https://herreradelduque.github.io/dataptmad0924_katas/src/documentation/docs/index.md/katas/intro-to-katas/</loc>
          <lastmod>2024-11-02</lastmod>
     </url>
     <url>
-         <loc>https://herreradelduque.github.io/dataptmad0924_docu/katas/leaderboard/</loc>
+         <loc>https://herreradelduque.github.io/dataptmad0924_katas/src/documentation/docs/index.md/katas/leaderboard/</loc>
          <lastmod>2024-11-02</lastmod>
     </url>
     <url>
-         <loc>https://herreradelduque.github.io/dataptmad0924_docu/teacher/publication_ghpages/</loc>
+         <loc>https://herreradelduque.github.io/dataptmad0924_katas/src/documentation/docs/index.md/teacher/publication_ghpages/</loc>
          <lastmod>2024-11-02</lastmod>
     </url>
 </urlset>
