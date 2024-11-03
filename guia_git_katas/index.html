@@ -622,41 +622,32 @@
 flowchart TD
     A[Inicio] --&gt; B{¿Preparado para comenzar?}
     B --&gt;|Sí| C[Ejecutar git status]
-    B --&gt;|No| Z[Terminar]</p>
-<pre><code>C --&gt; D{¿Estás en la rama main?}
-D --&gt;|Sí| E[Realizar cambios en la rama]
-D --&gt;|No| F[Ejecutar git checkout main]
-
-F --&gt; G{¿Hay cambios sin confirmar?}
-G --&gt;|Sí| H[Ejecutar git add .]
-G --&gt;|No| I[Ejecutar git checkout main]
-
-H --&gt; J[Ejecutar git commit con mensaje: trabajo pendiente]
-J --&gt; K[Ejecutar git push]
-K --&gt; L[Ejecutar git checkout main]
-
-L --&gt; M[Verificar git status]
-M --&gt; N[Ejecutar git pull origin main]
-
-N --&gt; O[Crear nueva rama]
-
-O --&gt; P[Ejecutar git checkout -b kata_nombre-mi_nombre]
-
-P --&gt; Q[Guardar cambios]
-Q --&gt; R[Ejecutar git add archivos-a-agregar]
-R --&gt; S[Ejecutar git commit con mensaje: lab-started]
-S --&gt; T[Ejecutar git push origin nombre-de-la-rama]
-
-T --&gt; U[Al finalizar, realizar último commit]
-U --&gt; V[Ejecutar git add archivos-a-agregar]
-V --&gt; W[Ejecutar git commit con mensaje: kata-finished]
-W --&gt; X[Ejecutar git push origin nombre-de-la-rama]
-
-X --&gt; Y[Abrir Pull Request]
-Y --&gt; Z[Escribir título descriptivo: kata ejemplo tu nombre]
-Z --&gt; AA[Revisión y fusión por el equipo docente]
-AA --&gt; AB[Fin]
-</code></pre>
+    B --&gt;|No| Z[Terminar]
+    C --&gt; D{¿Estás en la rama main?}
+    D --&gt;|Sí| E[Realizar cambios en la rama]
+    D --&gt;|No| F[Ejecutar git checkout main]
+    F --&gt; G{¿Hay cambios sin confirmar?}
+    G --&gt;|Sí| H[Ejecutar git add .]
+    G --&gt;|No| I[Ejecutar git checkout main]
+    H --&gt; J[Ejecutar git commit con mensaje: trabajo pendiente]
+    J --&gt; K[Ejecutar git push]
+    K --&gt; L[Ejecutar git checkout main]
+    L --&gt; M[Verificar git status]
+    M --&gt; N[Ejecutar git pull origin main]
+    N --&gt; O[Crear nueva rama]
+    O --&gt; P[Ejecutar git checkout -b kata_nombre-mi_nombre]
+    P --&gt; Q[Guardar cambios]
+    Q --&gt; R[Ejecutar git add archivos-a-agregar]
+    R --&gt; S[Ejecutar git commit con mensaje: lab-started]
+    S --&gt; T[Ejecutar git push origin nombre-de-la-rama]
+    T --&gt; U[Al finalizar, realizar último commit]
+    U --&gt; V[Ejecutar git add archivos-a-agregar]
+    V --&gt; W[Ejecutar git commit con mensaje: kata-finished]
+    W --&gt; X[Ejecutar git push origin nombre-de-la-rama]
+    X --&gt; Y[Abrir Pull Request]
+    Y --&gt; Z[Escribir título descriptivo: kata ejemplo tu nombre]
+    Z --&gt; AA[Revisión y fusión por el equipo docente]
+    AA --&gt; AB[Fin]</p>
 
 
 
