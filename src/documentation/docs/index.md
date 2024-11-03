@@ -3,4 +3,4 @@
 Here are some important sections:
 
 - [Leaderboard](leaderboard.md)
-- [Q&A](questions.md)
+- [Step by Step](guia_git_katas.md)
