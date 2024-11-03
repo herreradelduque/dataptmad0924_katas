@@ -1,1 +1,1 @@
-{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"","title":"my index","text":""}]}
+{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"","title":"Home","text":""},{"location":"#welcome-to-ironhack-katas-training","title":"Welcome to Ironhack Katas Training","text":"<p>Here are some important sections:</p> <ul> <li>Leaderboard</li> <li>Q&amp;A</li> </ul>"}]}
