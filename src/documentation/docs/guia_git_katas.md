@@ -16,7 +16,7 @@ Bienvenidos a la guía de uso de Git para los Katas de Ironhack. Esta guía est�
 
 ---
 
-## Verificación Inicial
+## Comprobación Inicial
 
 1.  **Antes de comenzar una nueva tarea** : Abre la terminal y ejecuta:
 
@@ -24,7 +24,7 @@ Bienvenidos a la guía de uso de Git para los Katas de Ironhack. Esta guía est�
    git status
    ```
 
-1.1  **Verifica si estás en la rama principal** :
+1.1  **Verifica si estás en la rama main** :
 
    - Si no estás en la rama `main`, cambia a la rama principal con:
 
@@ -36,12 +36,15 @@ Bienvenidos a la guía de uso de Git para los Katas de Ironhack. Esta guía est�
 
    ```
    git add .
-   git commit -m "cambios no confirmados"
+
+   git commit -m "trabajo pendiente"
+
    git push
+
    git checkout main
    ```
 
-1.3  **Verifica que ahora estés en la rama principal** :
+1.3  **Verifica que ahora estés en la rama main** :
 
    ```
    git status
@@ -73,7 +76,9 @@ Bienvenidos a la guía de uso de Git para los Katas de Ironhack. Esta guía est�
 
    ```
    git add <archivos-a-agregar>
-   git commit -m "lab-iniciado"
+
+   git commit -m "lab-started"
+
    git push origin <nombre-de-la-rama>
    ```
 
@@ -81,15 +86,17 @@ Bienvenidos a la guía de uso de Git para los Katas de Ironhack. Esta guía est�
 
    ```
    git add <archivos-a-agregar>
-   git commit -m "kata-terminada"
+
+   git commit -m "kata-finished"
+
    git push origin <nombre-de-la-rama>
    ```
 
 ---
 
-## Abrir un Pull Request
+## Abrir una Pull Request
 
-4.  **Finalmente, abre un Pull Request** :
+4.  **Finalmente, abre una Pull Request** :
 
    - Ve a la interfaz del repositorio en GitHub y selecciona tu rama para hacer un Pull Request hacia `main`.
 
@@ -105,6 +112,6 @@ Bienvenidos a la guía de uso de Git para los Katas de Ironhack. Esta guía est�
 
 ## Conclusión
 
-**Para trabajar en las tareas posteriores**, crea una nueva rama para cada nueva tarea siguiendo el mismo procedimiento. 
+**Para trabajar en las tareas futuras**, crea una nueva rama para cada nueva tarea siguiendo el mismo procedimiento. 
 
-### ¡Feliz codificación!
+### ¡Happy conding!
