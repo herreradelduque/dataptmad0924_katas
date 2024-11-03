@@ -159,4 +159,9 @@ flowchart TD
     Y --> Z[Escribir título descriptivo: kata ejemplo tu nombre]
     Z --> AA[Revisión y fusión por el equipo docente]
     AA --> AB[Fin]
+
+classDef textoImportante color:#ff0000, font-weight:bold;
+
+class C textoImportante;
+
 ```
