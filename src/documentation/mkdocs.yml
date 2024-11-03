@@ -3,7 +3,9 @@ site_name: "Ironhack Katas Training"
 nav:
   - Home: index.md
   - Leaderboard: leaderboard.md
-  - Step by Step: guia_git_katas.md
+  - Step by Step: 
+    - Uso frecuente: guia_git_katas.md
+    - Dia 0: dia_0_guia_git_katas.md
 
 theme:
   name: material
