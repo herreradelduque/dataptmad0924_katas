@@ -36,11 +36,14 @@ Bienvenidos a la guía de uso de Git para los Katas de Ironhack. Esta guía est�
 
    ```
    git add .
-
+   ```
+   ```
    git commit -m "trabajo pendiente"
-
+   ```
+   ```
    git push
-
+   ```
+   ```
    git checkout main
    ```
 
@@ -76,9 +79,11 @@ Bienvenidos a la guía de uso de Git para los Katas de Ironhack. Esta guía est�
 
    ```
    git add <archivos-a-agregar>
-
+   ```
+   ```
    git commit -m "lab-started"
-
+   ```
+   ```
    git push origin <nombre-de-la-rama>
    ```
 
@@ -86,9 +91,11 @@ Bienvenidos a la guía de uso de Git para los Katas de Ironhack. Esta guía est�
 
    ```
    git add <archivos-a-agregar>
-
+   ```
+   ```
    git commit -m "kata-finished"
-
+   ```
+   ```
    git push origin <nombre-de-la-rama>
    ```
 
