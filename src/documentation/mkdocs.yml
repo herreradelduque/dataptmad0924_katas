@@ -10,6 +10,6 @@ nav:
 theme:
   name: material
 
-extra:
-  mermaid:
-    enabled: true
+plugins:
+  - search
+  - mermaid2
