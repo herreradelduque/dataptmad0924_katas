@@ -1,6 +1,4 @@
-## Welcome to Ironhack Katas Training
-
-Here are some important sections:
+## Ironhack Katas Training
 
 - [Leaderboard](leaderboard.md)
 - [Procedimiento nueva kata](procedimiento_git_katas.md)
