@@ -5,7 +5,7 @@
 2. [Comprobación Inicial](#verificación-inicial)
 3. [Creación de una Nueva Rama](#creación-de-una-nueva-rama)
 4. [Comandos Básicos de Git](#comandos-básicos-de-git)
-5. [Abrir un Pull Request](#abrir-un-pull-request)
+5. [Abrir una Pull Request](#abrir-un-pull-request)
 6. [Conclusión](#conclusión)
 
 ---
@@ -127,41 +127,4 @@ Bienvenidos a la guía de uso de Git para los Katas de Ironhack. Esta guía est�
 
 **Para trabajar en las tareas futuras**, crea una nueva rama para cada nueva tarea siguiendo el mismo procedimiento. 
 
-### ¡Happy conding!
-
-```mermaid
-flowchart TD
-    A[Inicio] --> B{¿Preparado para comenzar?}
-    B -->|Sí| C[Ejecutar git status]
-    B -->|No| Z[Terminar]
-    C --> D{¿Estás en la rama main?}
-    D -->|Sí| E[Realizar cambios en la rama]
-    D -->|No| F[Ejecutar git checkout main]
-    F --> G{¿Hay cambios sin confirmar?}
-    G -->|Sí| H[Ejecutar git add .]
-    G -->|No| I[Ejecutar git checkout main]
-    H --> J[Ejecutar git commit con mensaje: trabajo pendiente]
-    J --> K[Ejecutar git push]
-    K --> L[Ejecutar git checkout main]
-    L --> M[Verificar git status]
-    M --> N[Ejecutar git pull origin main]
-    N --> O[Crear nueva rama]
-    O --> P[Ejecutar git checkout -b kata_nombre-mi_nombre]
-    P --> Q[Guardar cambios]
-    Q --> R[Ejecutar git add archivos-a-agregar]
-    R --> S[Ejecutar git commit con mensaje: lab-started]
-    S --> T[Ejecutar git push origin nombre-de-la-rama]
-    T --> U[Al finalizar, realizar último commit]
-    U --> V[Ejecutar git add archivos-a-agregar]
-    V --> W[Ejecutar git commit con mensaje: kata-finished]
-    W --> X[Ejecutar git push origin nombre-de-la-rama]
-    X --> Y[Abrir Pull Request]
-    Y --> Z[Escribir título descriptivo: kata ejemplo tu nombre]
-    Z --> AA[Revisión y fusión por el equipo docente]
-    AA --> AB[Fin]
-
-classDef textoImportante color:#ff0000, font-weight:bold;
-
-class C textoImportante;
-
-```
+### ¡Happy coding!
