@@ -5,7 +5,7 @@ nav:
   - Leaderboard: leaderboard.md
   - Procedimientos y diagrama de flujo: 
     - Procedimiento nueva kata: procedimiento_git_katas.md
-    - Diagrama git: diagrama_git_katas.md
+    - Diagrama nueva kata: diagrama_git_katas.md
     - Procedimiento dia 0: procedimiento_dia_0.md
 
 theme:
