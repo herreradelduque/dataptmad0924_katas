@@ -4,7 +4,7 @@
 
 | Rank | Student           | Merged PRs | Last Merged PR Timestamp     |
 |------|-------------------|------------|-------------------------------|
-| 1    | Kristinawk        | 4          | 2024-09-27T13:24:27Z          |
+| 1    | Kristinawk        | 5          | 2024-09-27T13:24:27Z          |
 | 2    | chowira        | 1          | 2024-10-11T11:21:50Z          |
 | 3    | martingonzalezr001        | 1          | 2024-11-01T18:43:16Z          |
 
@@ -14,6 +14,7 @@
 
 | Pull Request                             | Student        | Repo                         | Created Timestamp           | Merged Timestamp            |
 |------------------------------------------|----------------|------------------------------|-----------------------------|-----------------------------|
+| kata-deadfish-swim-kristina                         | Kristinawk | herreradelduque/dataptmad0924_katas | 2024-11-02T08:18:10Z      | 2024-11-20T17:31:56Z      |
 | html-css-colors [Martin Gonzalez]                         | martingonzalezr001 | herreradelduque/dataptmad0924_katas | 2024-10-26T07:17:03Z      | 2024-11-01T18:43:16Z      |
 | [kata-groupby-sum] kristina                         | Kristinawk | herreradelduque/dataptmad0924_katas | 2024-10-12T07:15:25Z      | 2024-10-24T17:04:42Z      |
 | kata-supermarket-queue[jose]                         | chowira | herreradelduque/dataptmad0924_katas | 2024-10-05T07:57:34Z      | 2024-10-11T11:21:50Z      |
