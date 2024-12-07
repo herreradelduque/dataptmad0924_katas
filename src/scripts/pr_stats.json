@@ -1,0 +1,190 @@
+{
+    "users": {
+        "martingonzalezr001": 1,
+        "Paulcorreafl": 2,
+        "herreradelduque": 26,
+        "Kristinawk": 1
+    },
+    "detailed_prs": [
+        {
+            "title": "html-css-colors [Martin Gonzalez]",
+            "merged_at": "2024-11-01T18:43:16Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/94",
+            "user": "martingonzalezr001"
+        },
+        {
+            "title": "kata-supermarket-queue-Paul",
+            "merged_at": null,
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/93",
+            "user": "Paulcorreafl"
+        },
+        {
+            "title": "[kata-banking-system] Paul Correa",
+            "merged_at": null,
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/92",
+            "user": "Paulcorreafl"
+        },
+        {
+            "title": "updates",
+            "merged_at": "2024-10-12T11:56:06Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/91",
+            "user": "herreradelduque"
+        },
+        {
+            "title": "updates",
+            "merged_at": "2024-10-12T11:17:41Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/90",
+            "user": "herreradelduque"
+        },
+        {
+            "title": "updates",
+            "merged_at": "2024-10-12T11:12:40Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/89",
+            "user": "herreradelduque"
+        },
+        {
+            "title": "updates",
+            "merged_at": "2024-10-12T11:10:33Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/88",
+            "user": "herreradelduque"
+        },
+        {
+            "title": "update",
+            "merged_at": "2024-10-12T11:00:10Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/87",
+            "user": "herreradelduque"
+        },
+        {
+            "title": "update",
+            "merged_at": "2024-10-12T10:56:16Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/86",
+            "user": "herreradelduque"
+        },
+        {
+            "title": "update",
+            "merged_at": "2024-10-12T10:48:55Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/85",
+            "user": "herreradelduque"
+        },
+        {
+            "title": "update",
+            "merged_at": "2024-10-12T10:42:45Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/84",
+            "user": "herreradelduque"
+        },
+        {
+            "title": "update",
+            "merged_at": "2024-10-12T10:38:21Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/83",
+            "user": "herreradelduque"
+        },
+        {
+            "title": "update",
+            "merged_at": "2024-10-12T10:25:43Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/82",
+            "user": "herreradelduque"
+        },
+        {
+            "title": "update",
+            "merged_at": "2024-10-12T10:19:08Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/81",
+            "user": "herreradelduque"
+        },
+        {
+            "title": "update",
+            "merged_at": "2024-10-12T10:08:47Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/80",
+            "user": "herreradelduque"
+        },
+        {
+            "title": "update",
+            "merged_at": "2024-10-12T10:05:28Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/79",
+            "user": "herreradelduque"
+        },
+        {
+            "title": "update",
+            "merged_at": "2024-10-12T09:58:59Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/78",
+            "user": "herreradelduque"
+        },
+        {
+            "title": "update",
+            "merged_at": "2024-10-12T09:53:08Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/77",
+            "user": "herreradelduque"
+        },
+        {
+            "title": "update",
+            "merged_at": "2024-10-12T09:44:19Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/76",
+            "user": "herreradelduque"
+        },
+        {
+            "title": "update",
+            "merged_at": "2024-10-12T09:39:14Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/75",
+            "user": "herreradelduque"
+        },
+        {
+            "title": "update",
+            "merged_at": "2024-10-12T09:31:02Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/74",
+            "user": "herreradelduque"
+        },
+        {
+            "title": "[kata-groupby-sum] kristina",
+            "merged_at": "2024-10-24T17:04:42Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/71",
+            "user": "Kristinawk"
+        },
+        {
+            "title": "updates",
+            "merged_at": "2024-10-05T16:31:49Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/69",
+            "user": "herreradelduque"
+        },
+        {
+            "title": "updates",
+            "merged_at": "2024-10-05T16:25:45Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/68",
+            "user": "herreradelduque"
+        },
+        {
+            "title": "updates",
+            "merged_at": "2024-10-05T16:22:09Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/67",
+            "user": "herreradelduque"
+        },
+        {
+            "title": "updates",
+            "merged_at": "2024-10-05T16:04:11Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/66",
+            "user": "herreradelduque"
+        },
+        {
+            "title": "updated merges count",
+            "merged_at": "2024-10-05T15:56:38Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/65",
+            "user": "herreradelduque"
+        },
+        {
+            "title": "updated merges count",
+            "merged_at": "2024-10-05T15:54:46Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/64",
+            "user": "herreradelduque"
+        },
+        {
+            "title": "Updated rank",
+            "merged_at": "2024-10-05T15:44:11Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/63",
+            "user": "herreradelduque"
+        },
+        {
+            "title": "refactored path",
+            "merged_at": "2024-10-05T15:23:53Z",
+            "url": "https://github.com/herreradelduque/dataptmad0924_katas/pull/62",
+            "user": "herreradelduque"
+        }
+    ]
+}

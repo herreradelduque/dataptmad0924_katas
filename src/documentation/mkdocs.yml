@@ -1,0 +1,16 @@
+site_name: "Ironhack Katas Training"
+
+nav:
+  - Home: index.md
+  - Leaderboard: leaderboard.md
+  - Procedimientos y diagrama de flujo: 
+    - Procedimiento nueva kata: procedimiento_git_katas.md
+    - Diagrama nueva kata: diagrama_git_katas.md
+    - Procedimiento dia 0: procedimiento_dia_0.md
+
+theme:
+  name: material
+
+plugins:
+  - search
+  - mermaid2
